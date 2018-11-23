@@ -34,7 +34,7 @@ class V1::DogWalkingsController < ApplicationController
     render json: dog_walking, status: :ok
   end
 
-  def end_walk
+  def finish_walk
     dog_walking = DogWalking.find(params[:dog_walking_id])
     dog_walking.end_time = Time.now
     dog_walking.status = "finished"
